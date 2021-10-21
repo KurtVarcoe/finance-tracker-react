@@ -1,4 +1,4 @@
-const AddTransaction = () => {
+const AddTransaction = ({ onSubmit }) => {
     return (
         <form>
             <h3>
@@ -16,7 +16,7 @@ const AddTransaction = () => {
                 </label>
                 <input type='text' placeholder='Enter amount...' id='amount'></input>
             </div>
-            <input type='submit' ></input>
+            <input type='submit' onSubmit={onSubmit}></input>
         </form>
     )
 }

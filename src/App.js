@@ -6,13 +6,19 @@ import TransactionList from './components/TransactionList';
 import AddTransaction from './components/AddTransaction';
 
 const App = () => {
+  // Submit form
+  const onSubmit = (e) => {
+    e.preventDefault()
+    console.log('Submit transaction')
+  }
+
   return (
     <div>
       <Header />
       <Balance />
       <IncomeExpense />
       <TransactionList />
-      <AddTransaction />
+      <AddTransaction onSubmit={onSubmit}/>
     </div>
   );
 }
